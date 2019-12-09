@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" href="/img/logo.png">
+    <link rel="stylesheet" href="calculator.css">
+    <title>CALCULATOR | NUSANTECH</title>
+</head>
+
+<body>
+    <div class="hero">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="Input()">Input</button>
+                <button type="button" class="toggle-btn" onclick="Hasil()">Hasil</button>
+            </div>
+
+            <form id="Input" class="input-group" name="fform">
+                <span class="msg">MASUKANDATA</span>
+
+                <input type="text" class="input-field" name="bilangan1" placeholder="Input X" required>
+                <input type="checkbox" class="chech-box"><span></span>
+                <input type="text" class="input-field" name="bilangan2" placeholder="Input X" required>
+                <input type="checkbox" class="chech-box"><span></span>
+                <input type="text" class="input-field" name="bilangan3" placeholder="Input X" required>
+                <input type="checkbox" class="chech-box"><span></span>
+
+                <button type="button" class="submit-btn" onclick="jumlah()">+</button>
+                <button type="button" class="submit-btn" onclick="kurang()">-</button>
+                <button type="button" class="submit-btn" onclick="bagi()">/</button>
+                <button type="button" class="submit-btn" onclick="kali()">*</button>
+                <input type="text" class="input-field" name="ohasil" onclick="Hasi" placeholder="HASIL" required>
+                <button input type="reset" class="submit-btn" onclick="reset()">reset</button>
+            </form>
+
+
+
+
+        </div>
+    </div>
+
+    <script>
+        var x = document.getElementById("Input");
+        var y = document.getElementById("Hasil");
+        var z = document.getElementById("btn");
+
+        function Hasil() {
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left = "110px";
+        }
+
+        function Input() {
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0";
+        }
+    </script>
+    <script>
+        function jumlah() {
+
+            var bil1 = parseFloat(document.fform.bilangan1.value);
+            if (isNaN(bil1))
+                bil1 = 0.0;
+            var bil2 = parseFloat(document.fform.bilangan2.value);
+            if (isNaN(bil2))
+                bil2 = 0.0;
+            var bil3 = parseFloat(document.fform.bilangan3.value);
+            if (isNaN(bil3))
+                bil3 = 0.0;
+            var hasil = bil1 + bil2 + bil3;
+            document.fform.ohasil.value = hasil;
+        }
+    </script>
+    <script>
+        function kurang() {
+
+            var bil1 = parseFloat(document.fform.bilangan1.value);
+            if (isNaN(bil1))
+                bil1 = 0.0;
+            var bil2 = parseFloat(document.fform.bilangan2.value);
+            if (isNaN(bil2))
+                bil2 = 0.0;
+            var bil3 = parseFloat(document.fform.bilangan3.value);
+            if (isNaN(bil3))
+                bil3 = 0.0;
+            var hasil = bil1 - bil2 - bil3;
+            document.fform.ohasil.value = hasil;
+        }
+    </script>
+    <script>
+        function bagi() {
+
+            var bil1 = parseFloat(document.fform.bilangan1.value);
+            if (isNaN(bil1))
+                bil1 = 0.0;
+            var bil2 = parseFloat(document.fform.bilangan2.value);
+            if (isNaN(bil2))
+                bil2 = 0.0;
+            var bil3 = parseFloat(document.fform.bilangan3.value);
+            if (isNaN(bil3))
+                bil3 = 0.0;
+            var hasil = bil1 / bil2 / bil3;
+            document.fform.ohasil.value = hasil;
+        }
+    </script>
+    <script>
+        function bagi() {
+
+            var bil1 = parseFloat(document.fform.bilangan1.value);
+            if (isNaN(bil1))
+                bil1 = 0.0;
+            var bil2 = parseFloat(document.fform.bilangan2.value);
+            if (isNaN(bil2))
+                bil2 = 0.0;
+            var bil3 = parseFloat(document.fform.bilangan3.value);
+            if (isNaN(bil3))
+                bil3 = 0.0;
+            var hasil = bil1 * bil2 * bil3;
+            document.fform.ohasil.value = hasil;
+        }
+    </script>
+
+
+</body>
+
+</html>
